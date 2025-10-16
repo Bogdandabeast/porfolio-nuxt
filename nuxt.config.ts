@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   modules: ['nitro-cloudflare-dev', '@nuxt/eslint'],
 
   eslint: {
+    checker: true,
     config: {
       standalone: false,
     },
