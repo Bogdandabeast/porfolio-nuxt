@@ -18,5 +18,6 @@ export default withNuxt(
       'prefer-const': 'error',
       'no-alert': 'error',
     },
+    extends: ['plugin:prettier/recommended'],
   }),
 )

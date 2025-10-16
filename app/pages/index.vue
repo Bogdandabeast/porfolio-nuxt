@@ -2,8 +2,6 @@
 
 <template>
   <div>
-    <h1>Hola desde el indice</h1>
+    <h1 class="text-primary">Hola-indice</h1>
   </div>
 </template>
-
-<style scoped></style>
