@@ -28,9 +28,13 @@
     "eslint": "^9.37.0",
     "h3": "2.0.1-rc.2",
     "husky": "^9.1.7",
+    "lint-staged": "^16.2.4",
     "nitro-cloudflare-dev": "^0.2.2",
     "nitropack": "^2.12.7",
     "prettier": "^3.6.2",
     "wrangler": "^4.43.0"
+  },
+  "lint-staged": {
+    "*": "pnpm lint"
   }
 }
