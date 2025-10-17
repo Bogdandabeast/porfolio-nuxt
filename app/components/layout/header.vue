@@ -1,15 +1,15 @@
 <script setup lang="ts">
-export interface Link {
-  name: string
-  route: string
-}
+export type Link = {
+  name: string;
+  route: string;
+};
 
-export interface HeaderInfo {
-  name: string
-  links: Link[]
-}
+export type HeaderInfo = {
+  name: string;
+  links: Link[];
+};
 
-defineProps<{ headerInfo: HeaderInfo }>()
+defineProps<{ headerInfo: HeaderInfo }>();
 </script>
 
 <template>
