@@ -1,46 +1,14 @@
 <script setup lang="ts">
-import type { HeaderInfo } from '~/components/layout/header.vue';
+import footerContent from '~/assets/data/layout/footer.json';
+import headerContent from '~/assets/data/layout/header.json';
 
-const json: HeaderInfo = {
-  name: 'Bogdan',
-  links: [
-    {
-      name: 'About',
-      route: '/about',
-    },
-    {
-      name: 'Home',
-      route: '/',
-    },
-    {
-      name: 'Services',
-      route: '/services',
-    },
-    {
-      name: 'Portfolio',
-      route: '/portfolio',
-    },
-    {
-      name: 'Blog',
-      route: '/blog',
-    },
-    {
-      name: 'Contact',
-      route: '/contact',
-    },
-    {
-      name: 'FAQ',
-      route: '/faq',
-    },
-  ],
-};
 </script>
 
 <template>
   <div>
-    <layout-header :header-info="json" />
+    <layout-header :header-info="headerContent" />
     <main><slot /></main>
-    <layout-footer />
+    <layout-footer :footer-info="footerContent" />
   </div>
 </template>
 

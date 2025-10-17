@@ -1,9 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+
+  modules: ['nitro-cloudflare-dev', '@nuxt/eslint', '@nuxt/icon'],
   devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
+  compatibilityDate: '2025-07-15',
 
   nitro: {
     preset: 'cloudflare_module',
@@ -14,15 +17,12 @@ export default defineNuxtConfig({
     },
   },
   vite: { plugins: [tailwindcss()] },
-  css: ['~/assets/css/main.css'],
-
-  modules: ['nitro-cloudflare-dev', '@nuxt/eslint', '@nuxt/icon'],
 
   eslint: {
     checker: true,
     config: {
       standalone: false,
-      stylistic: true,
+      stylistic: false,
     },
   },
-});
+})
