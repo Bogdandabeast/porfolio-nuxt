@@ -1,15 +1,11 @@
-import antfu from '@antfu/eslint-config'
 // @ts-check
+import antfu from '@antfu/eslint-config'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
   antfu({
     typescript: true,
     vue: true,
-    nuxt: true,
-    prettier: true,
-    node: false,
-    browser: true,
     rules: {
       'no-console': ['error', { allow: ['warn', 'error'] }],
       'no-debugger': 'error',
@@ -18,6 +14,5 @@ export default withNuxt(
       'prefer-const': 'error',
       'no-alert': 'error',
     },
-    extends: ['plugin:prettier/recommended'],
   }),
 )

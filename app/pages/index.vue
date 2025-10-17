@@ -2,6 +2,25 @@
 
 <template>
   <div>
-    <h1 class="text-primary">Hola-indice</h1>
+    <main class="flex-grow">
+      <div class="px-4 py-10 text-center md:py-20">
+        <div class="flex flex-col items-center gap-6">
+          <h1
+            class="font-display text-4xl leading-tight font-bold tracking-tighter text-text-dark md:text-6xl"
+          >
+            Bogdan - Desarrollador Front-End
+          </h1>
+          <p class="mx-auto max-w-2xl font-body text-base text-text-dark/80 md:text-lg">
+            Apasionado por crear interfaces de usuario atractivas y funcionales. Especializado en
+            React, Vue y las últimas tecnologías web para dar vida a tus ideas.
+          </p>
+          <button
+            class="flex h-12 transform cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-6 text-base leading-normal font-bold tracking-[0.015em] text-white transition-colors hover:scale-105 hover:bg-primary/90"
+          >
+            <span class="truncate">Ver mis proyectos</span>
+          </button>
+        </div>
+      </div>
+    </main>
   </div>
 </template>
