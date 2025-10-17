@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-primary: #3b82f6;
@@ -7,9 +7,9 @@
   --color-text-light: #333333;
   --color-text-dark: #e5e7eb;
 
-  --font-display: "Montserrat", sans-serif;
-  --font-body: "Roboto", sans-serif;
-  --font-lato: "Lato", sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-lato: 'Lato', sans-serif;
 
   --radius: 0.25rem;
   --radius-lg: 0.5rem;

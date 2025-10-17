@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "bradlc.vscode-tailwindcss",
     "Vue.volar",
+    "esbenp.prettier-vscode",
     "xabikos.JavaScriptSnippets"
   ]
 }

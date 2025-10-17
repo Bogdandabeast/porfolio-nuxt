@@ -9,7 +9,6 @@
         style="color: white"
       />
       <Icon
-
         name="line-md:github"
         size="35"
         style="color: white"
