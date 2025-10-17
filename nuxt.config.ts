@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   vite: { plugins: [tailwindcss()] },
   css: ['~/assets/css/main.css'],
 
-  modules: ['nitro-cloudflare-dev', '@nuxt/eslint'],
+  modules: ['nitro-cloudflare-dev', '@nuxt/eslint', '@nuxt/icon'],
 
   eslint: {
     checker: true,
