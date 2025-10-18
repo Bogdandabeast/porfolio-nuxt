@@ -1,33 +1,33 @@
 {
-    "name": "Bogdan",
-    "links": [
-        {
-            "name": "About",
-            "route": "/about"
-        },
-        {
-            "name": "Home",
-            "route": "/"
-        },
-        {
-            "name": "Services",
-            "route": "/services"
-        },
-        {
-            "name": "Portfolio",
-            "route": "/portfolio"
-        },
-        {
-            "name": "Blog",
-            "route": "/blog"
-        },
-        {
-            "name": "Contact",
-            "route": "/contact"
-        },
-        {
-            "name": "FAQ",
-            "route": "/faq"
-        }
-    ]
+  "name": "Bogdan",
+  "links": [
+    {
+      "name": "About",
+      "route": "/about"
+    },
+    {
+      "name": "Home",
+      "route": "/"
+    },
+    {
+      "name": "Services",
+      "route": "/services"
+    },
+    {
+      "name": "Portfolio",
+      "route": "/portfolio"
+    },
+    {
+      "name": "Blog",
+      "route": "/blog"
+    },
+    {
+      "name": "Contact",
+      "route": "/contact"
+    },
+    {
+      "name": "FAQ",
+      "route": "/faq"
+    }
+  ]
 }

@@ -1,21 +1,55 @@
 <script setup lang="ts">
-type Category = {
+type Card = {
   name: string;
+  description: string;
+  img: string;
+  tags: string[];
+};
+
+const props = defineProps<{ tabCards: Card[] }>();
+
+const selectedCategory = ref('All');
+
+const categories = computed(() => {
+  const tags = new Set<string>();
+  props.tabCards.forEach((card) => {
+    card.tags.forEach((tag) => {
+      tags.add(tag);
+    });
+  });
+  return ['All', ...Array.from(tags)];
+});
+
+const filteredCards = computed(() => {
+  if (selectedCategory.value === 'All') {
+    return props.tabCards;
+  }
+  return props.tabCards.filter(card => card.tags.includes(selectedCategory.value));
+});
+
+function selectCategory(category: string) {
+  selectedCategory.value = category;
 }
-
-defineProps<{ categories: Category[] }>();
-
 </script>
 
 <template>
   <div class="flex justify-center gap-2 md:gap-3 p-3 mb-8 overflow-x-auto">
     <button
       v-for="(category, index) in categories"
-      :key="category.name + index"
-      class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 bg-primary/30 text-text-primary text-sm font-medium leading-normal transition-colors"
+      :key="category + index"
+      class="cursor-pointer flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium leading-normal transition-colors"
+      :class="{ 'bg-primary text-white': selectedCategory === category, 'bg-primary/30 text-text-primary': selectedCategory !== category }"
+      @click="selectCategory(category)"
     >
-      {{ category.name }}
+      {{ category }}
     </button>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <project-card
+      v-for="(card, index) in filteredCards"
+      :key="card.name + index"
+      :card="card"
+    />
   </div>
 </template>
 

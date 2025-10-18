@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import footerContent from '~/assets/data/layout/footer.json';
 import headerContent from '~/assets/data/layout/header.json';
-
 </script>
 
 <template>
