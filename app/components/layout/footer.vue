@@ -19,7 +19,6 @@ defineProps<{
 
 <template>
   <footer>
-    <layout-mobile-menu class="md:hidden" />
     <div class="flex flex-col gap-6 px-5 py-10 text-center">
       <div class="flex justify-center gap-6">
         <social-icons />
