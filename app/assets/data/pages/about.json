@@ -1,0 +1,11 @@
+{
+  "title": "Sobre Mí",
+  "description": "Soy un desarrollador front-end apasionado con un amor por la creación de experiencias de usuario hermosas e intuitivas. Me encanta convertir problemas complejos en soluciones simples y elegantes. Cuando no estoy programando, me puedes encontrar explorando nuevas tecnologías o disfrutando de una buena taza de café.",
+  "author": "Juan Pérez - Desarrollador Front-End",
+  "joblist_title": "Experiencia",
+  "skilllist_title": "Habilidades",
+  "button": {
+    "text": "Ponerse en Contacto",
+    "link": "/contact"
+  }
+}

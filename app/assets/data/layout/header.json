@@ -14,8 +14,8 @@
       "route": "/project"
     },
     {
-      "name" : "Contacto",
-      "route" : "/contact"
+      "name": "Contacto",
+      "route": "/contact"
     }
   ]
 }

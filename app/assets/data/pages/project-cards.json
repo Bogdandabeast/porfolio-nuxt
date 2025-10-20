@@ -22,41 +22,5 @@
     "description": "Aplicación de gestión de tareas con notificaciones push y sincronización en la nube.",
     "img": "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
     "tags": ["React Native", "Expo", "Firebase"]
-  },
-  {
-    "name": "DataVision",
-    "description": "Dashboard de analítica con gráficas interactivas y métricas en tiempo real para empresas.",
-    "img": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-    "tags": ["Angular", "D3.js", "Node.js"]
-  },
-  {
-    "name": "TechMarket",
-    "description": "Tienda online de gadgets tecnológicos con integración de pagos mediante Stripe.",
-    "img": "https://cdn-icons-png.flaticon.com/512/1170/1170576.png",
-    "tags": ["Next.js", "Stripe", "MongoDB"]
-  },
-  {
-    "name": "CookShare",
-    "description": "Plataforma colaborativa para compartir recetas, dejar reseñas y guardar favoritas.",
-    "img": "https://cdn-icons-png.flaticon.com/512/1046/1046784.png",
-    "tags": ["Vue", "Pinia", "Supabase"]
-  },
-  {
-    "name": "LearnHub",
-    "description": "Sistema de cursos online con registro de usuarios, evaluaciones y certificados digitales.",
-    "img": "https://cdn-icons-png.flaticon.com/512/3135/3135810.png",
-    "tags": ["React", "Redux", "Node.js"]
-  },
-  {
-    "name": "TableNow",
-    "description": "Aplicación para reservar mesas en restaurantes con geolocalización y reseñas de clientes.",
-    "img": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png",
-    "tags": ["Flutter", "Dart", "Firebase"]
-  },
-  {
-    "name": "MyBlog CMS",
-    "description": "Blog personal con panel de administración, editor de texto enriquecido y sistema de comentarios.",
-    "img": "https://cdn-icons-png.flaticon.com/512/1828/1828961.png",
-    "tags": ["Svelte", "Tailwind", "Supabase"]
   }
 ]
