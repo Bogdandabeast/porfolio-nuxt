@@ -22,7 +22,7 @@ function toggleMenu() {
 <template>
   <header class="flex items-center justify-between px-6 py-4 whitespace-nowrap">
     <div class="flex items-center gap-4 text-text-dark">
-      <span class="font-display text-xl leading-tight font-bold tracking-[-0.015em]">
+      <span class="font-display text-xl leading-tight font-bold tracking-tight">
         {{ headerInfo.name }}
       </span>
     </div>

@@ -6,7 +6,7 @@ import page from '~/assets/data/pages/project.json';
 <template>
   <div>
     <div class="flex flex-col items-center text-center">
-      <h2 class="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] text-text-primary">
+      <h2 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-text-primary">
         {{ page.title }}
       </h2>
       <p class="mt-4 max-w-2xl text-lg text-text-secondary">

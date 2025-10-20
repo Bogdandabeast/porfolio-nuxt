@@ -11,7 +11,7 @@ defineProps<{ jobList: Job[]; title: string }>();
 
 <template>
   <div>
-    <h2 class="text-text-dark text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-6 pt-5 font-heading">
+    <h2 class="text-text-dark text-2xl sm:text-3xl font-bold leading-tight tracking-tight px-4 pb-6 pt-5 font-heading">
       {{ title }}
     </h2>
     <div
@@ -23,9 +23,9 @@ defineProps<{ jobList: Job[]; title: string }>();
         <Icon
           name="mdi:briefcase"
           size="50"
-          style="color: blue"
+          class="text-blue-500"
         />
-        <div class="w-[1.5px] bg-border-dark h-full" />
+        <div class="w-px bg-border-dark h-full" />
       </div>
       <div class="flex flex-1 flex-col pb-10">
         <p class="text-text-dark text-lg font-medium leading-normal">

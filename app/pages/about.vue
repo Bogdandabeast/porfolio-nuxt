@@ -13,7 +13,7 @@ import aboutData from '~/assets/data/pages/about.json';
         src="/img/bogdan.jpeg"
       >
       <div class="flex flex-col justify-center gap-2">
-        <h1 class="text-text-dark text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em] font-heading">
+        <h1 class="text-text-dark text-2xl sm:text-3xl font-bold leading-tight tracking-tight font-heading">
           {{ aboutData.title }}
         </h1>
         <p class="text-text-muted-dark text-base font-normal leading-relaxed">
@@ -30,7 +30,7 @@ import aboutData from '~/assets/data/pages/about.json';
     <about-skill-list :skillsections="skillsections" :title="aboutData.skilllist_title" />
     <div class="border-t border-border-dark my-12" />
     <div class="text-center pt-8">
-      <button class="flex mx-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+      <button class="flex mx-auto min-w-20 max-w-md cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-normal hover:bg-primary/90 transition-colors">
         <NuxtLink :to="aboutData.button.link">
           {{ aboutData.button.text }}
         </NuxtLink>
