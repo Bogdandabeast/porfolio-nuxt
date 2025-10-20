@@ -11,12 +11,6 @@ export type HeaderInfo = {
 };
 
 defineProps<{ headerInfo: HeaderInfo }>();
-
-const isMenuOpen = ref(false);
-
-function toggleMenu() {
-  isMenuOpen.value = !isMenuOpen.value;
-}
 </script>
 
 <template>
@@ -26,7 +20,6 @@ function toggleMenu() {
         {{ headerInfo.name }}
       </span>
     </div>
-
     <nav class="hidden items-center gap-9 md:flex">
       <NuxtLink
         v-for="(link, index) in headerInfo.links"
@@ -37,31 +30,6 @@ function toggleMenu() {
         {{ link.name }}
       </NuxtLink>
     </nav>
-
-    <div class="md:hidden">
-      <button
-        class="text-text-dark"
-        :aria-label="headerInfo.aria_label"
-        :aria-expanded="isMenuOpen.toString()"
-        @click="toggleMenu"
-      >
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-    </div>
-
-    <div v-if="isMenuOpen" class="absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
-      <nav class="flex flex-col items-center gap-4 p-4">
-        <NuxtLink
-          v-for="(link, index) in headerInfo.links"
-          :key="link.name + link.route + index"
-          :to="link.route"
-          class="font-lato text-sm leading-normal font-medium text-text-dark transition-colors hover:text-primary"
-          @click="toggleMenu"
-        >
-          {{ link.name }}
-        </NuxtLink>
-      </nav>
-    </div>
   </header>
 </template>
 
