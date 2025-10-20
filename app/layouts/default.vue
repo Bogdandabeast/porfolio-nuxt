@@ -4,9 +4,9 @@ import headerContent from '~/assets/data/layout/header.json';
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <layout-header :header-info="headerContent" />
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <slot />
     </main>
     <layout-footer :footer-info="footerContent" />
