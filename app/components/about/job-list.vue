@@ -3,18 +3,24 @@ type Job = {
   title: string;
   company_name: string;
   start_date: number;
-  end_date: number | null;
+  end_date: number | string;
 };
 
 defineProps<{ jobList: Job[] }>();
+
+const title = 'Experiencia';
 </script>
 
 <template>
   <div>
     <h2 class="text-text-dark text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-6 pt-5 font-heading">
-      Experiencia
+      {{ title }}
     </h2>
-    <div class="grid grid-cols-[auto_1fr] gap-x-4 px-4">
+    <div
+      v-for="(job, index) in jobList"
+      :key="job.company_name + index"
+      class="grid grid-cols-[auto_1fr] gap-x-4 px-4"
+    >
       <div class="flex flex-col items-center gap-1 pt-3">
         <Icon
           name="mdi:briefcase"
@@ -25,39 +31,10 @@ defineProps<{ jobList: Job[] }>();
       </div>
       <div class="flex flex-1 flex-col pb-10">
         <p class="text-text-dark text-lg font-medium leading-normal">
-          Desarrollador Front-End Senior
+          {{ job.title }}
         </p>
         <p class="text-text-muted-dark text-base font-normal leading-normal">
-          Tech Solutions Inc. - 2020 a la fecha
-        </p>
-      </div>
-      <div class="flex flex-col items-center gap-1">
-        <div class="w-[1.5px] bg-border-dark h-2" />
-        <div class="text-primary">
-          <span class="material-symbols-outlined">work</span>
-        </div>
-        <div class="w-[1.5px] bg-border-dark h-full" />
-      </div>
-      <div class="flex flex-1 flex-col pb-10">
-        <p class="text-text-dark text-lg font-medium leading-normal">
-          Desarrollador Front-End
-        </p>
-        <p class="text-text-muted-dark text-base font-normal leading-normal">
-          Web Wizards LLC - 2018 a 2020
-        </p>
-      </div>
-      <div class="flex flex-col items-center gap-1 pb-3">
-        <div class="w-[1.5px] bg-border-dark h-2" />
-        <div class="text-primary">
-          <span class="material-symbols-outlined">work</span>
-        </div>
-      </div>
-      <div class="flex flex-1 flex-col">
-        <p class="text-text-dark text-lg font-medium leading-normal">
-          Desarrollador Front-End Junior
-        </p>
-        <p class="text-text-muted-dark text-base font-normal leading-normal">
-          Creative Coders Co. - 2016 a 2018
+          {{ job.company_name }} - {{ job.start_date }} a {{ job.end_date }}
         </p>
       </div>
     </div>
