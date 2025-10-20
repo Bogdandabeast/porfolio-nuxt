@@ -1,21 +1,20 @@
 <script setup lang="ts">
 export type Icon = {
-  name: string
-  size: string
-  url: string
-  label: string
-}
+  name: string;
+  size: string;
+  url: string;
+  label: string;
+};
 
 export type FooterContent = {
-  icons: Icon[]
-  text: string
+  icons: Icon[];
+  text: string;
 
-}
+};
 
 defineProps<{
-  footerInfo: FooterContent
-}>()
-
+  footerInfo: FooterContent;
+}>();
 </script>
 
 <template>

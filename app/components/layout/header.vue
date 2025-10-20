@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 export type Link = {
-  name: string
-  route: string
+  name: string;
+  route: string;
 };
 
 export type HeaderInfo = {
-  name: string
-  links: Link[]
-}
+  name: string;
+  links: Link[];
+};
 
-defineProps<{ headerInfo: HeaderInfo }>()
+defineProps<{ headerInfo: HeaderInfo }>();
 
-const isMenuOpen = ref(false)
+const isMenuOpen = ref(false);
 
 function toggleMenu() {
-  isMenuOpen.value = !isMenuOpen.value
+  isMenuOpen.value = !isMenuOpen.value;
 }
 </script>
 
@@ -40,7 +40,12 @@ function toggleMenu() {
     </nav>
 
     <div class="md:hidden">
-      <button class="text-text-dark" @click="toggleMenu" aria-label="Open menu" :aria-expanded="isMenuOpen.toString()">
+      <button
+        class="text-text-dark"
+        aria-label="Open menu"
+        :aria-expanded="isMenuOpen.toString()"
+        @click="toggleMenu"
+      >
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>

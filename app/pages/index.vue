@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import page from '~/assets/data/pages/index.json'
+import page from '~/assets/data/pages/index.json';
 
 useHead({
   title: page.title,
@@ -9,7 +9,7 @@ useHead({
       content: page.description,
     },
   ],
-})
+});
 </script>
 
 <template>

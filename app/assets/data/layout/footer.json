@@ -1,59 +1,59 @@
 {
-    "icons": [
-        {
-            "name": "line-md:github",
-            "size": "30",
-            "url": "https://github.com",
-            "label": "Github"
-        },
-        {
-            "name": "line-md:twitter",
-            "size": "30",
-            "url": "https://twitter.com",
-            "label": "Twitter"
-        },
-        {
-            "name": "line-md:linkedin",
-            "size": "30",
-            "url": "https://linkedin.com",
-            "label": "LinkedIn"
-        },
-        {
-            "name": "line-md:facebook",
-            "size": "30",
-            "url": "https://facebook.com",
-            "label": "Facebook"
-        },
-        {
-            "name": "line-md:instagram",
-            "size": "30",
-            "url": "https://instagram.com",
-            "label": "Instagram"
-        },
-        {
-            "name": "line-md:youtube",
-            "size": "30",
-            "url": "https://youtube.com",
-            "label": "Youtube"
-        },
-        {
-            "name": "line-md:telegram",
-            "size": "30",
-            "url": "https://telegram.org",
-            "label": "Telegram"
-        },
-        {
-            "name": "line-md:email",
-            "size": "30",
-            "url": "bogdan.joboffers@gmail.com@email.com",
-            "label": "Email"
-        },
-        {
-            "name": "line-md:phone",
-            "size": "30",
-            "url": "tel:+123456789",
-            "label": "Phone"
-        }
-    ],
-    "text": "Bogdanfolio Todos los derechos reservados."
+  "icons": [
+    {
+      "name": "line-md:github",
+      "size": "30",
+      "url": "https://github.com",
+      "label": "Github"
+    },
+    {
+      "name": "line-md:twitter",
+      "size": "30",
+      "url": "https://twitter.com",
+      "label": "Twitter"
+    },
+    {
+      "name": "line-md:linkedin",
+      "size": "30",
+      "url": "https://linkedin.com",
+      "label": "LinkedIn"
+    },
+    {
+      "name": "line-md:facebook",
+      "size": "30",
+      "url": "https://facebook.com",
+      "label": "Facebook"
+    },
+    {
+      "name": "line-md:instagram",
+      "size": "30",
+      "url": "https://instagram.com",
+      "label": "Instagram"
+    },
+    {
+      "name": "line-md:youtube",
+      "size": "30",
+      "url": "https://youtube.com",
+      "label": "Youtube"
+    },
+    {
+      "name": "line-md:telegram",
+      "size": "30",
+      "url": "https://telegram.org",
+      "label": "Telegram"
+    },
+    {
+      "name": "line-md:email",
+      "size": "30",
+      "url": "bogdan.joboffers@gmail.com@email.com",
+      "label": "Email"
+    },
+    {
+      "name": "line-md:phone",
+      "size": "30",
+      "url": "tel:+123456789",
+      "label": "Phone"
+    }
+  ],
+  "text": "Bogdanfolio Todos los derechos reservados."
 }
