@@ -37,14 +37,14 @@ function selectCategory(category: string) {
     <button
       v-for="(category, index) in categories"
       :key="category + index"
-      class="cursor-pointer flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full px-4 text-sm font-medium leading-normal transition-colors"
+      class="cursor-pointer flex h-8 md:h-10 shrink-0 items-center justify-center gap-x-2 rounded-full px-3 md:px-4 text-xs md:text-sm font-medium leading-normal transition-colors"
       :class="{ 'bg-primary text-white': selectedCategory === category, 'bg-primary/30 text-text-primary': selectedCategory !== category }"
       @click="selectCategory(category)"
     >
       {{ category }}
     </button>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
     <project-card
       v-for="(card, index) in filteredCards"
       :key="card.name + index"
@@ -54,5 +54,4 @@ function selectCategory(category: string) {
 </template>
 
 <style scoped>
-
 </style>
