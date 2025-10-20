@@ -1,41 +1,7 @@
 <script setup lang="ts">
-const joblist = [
-  {
-    title: 'zepe dev',
-    company_name: 'Zepitek inc',
-    start_date: 2024,
-    end_date: 2025,
-  },
-  {
-    title: 'Frontend developer',
-    company_name: 'Alebat',
-    start_date: 2025,
-    end_date: 'la fecha',
-  },
-];
-
-const skillsections = [
-  {
-
-    field: 'Lenguajes',
-    skills: [
-      'HTML',
-      'CSS',
-      'JAVASCRIPT',
-      'TYPESCRIPT',
-    ],
-  },
-  {
-
-    field: 'Pajas',
-    skills: [
-      'HTML',
-      'CSS',
-      'JAVASCRIPT',
-      'TYPESCRIPT',
-    ],
-  },
-];
+import joblist from '~/assets/data/pages/about-joblist.json';
+import skillsections from '~/assets/data/pages/about-skillsections.json';
+import aboutData from '~/assets/data/pages/about.json';
 </script>
 
 <template>
@@ -48,25 +14,25 @@ const skillsections = [
       >
       <div class="flex flex-col justify-center gap-2">
         <h1 class="text-text-dark text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em] font-heading">
-          Sobre Mí
+          {{ aboutData.title }}
         </h1>
         <p class="text-text-muted-dark text-base font-normal leading-relaxed">
-          Soy un desarrollador front-end apasionado con un amor por la creación de experiencias de usuario hermosas e intuitivas. Me encanta convertir problemas complejos en soluciones simples y elegantes. Cuando no estoy programando, me puedes encontrar explorando nuevas tecnologías o disfrutando de una buena taza de café.
+          {{ aboutData.description }}
         </p>
         <p class="text-text-muted-dark text-base font-normal leading-relaxed font-medium">
-          Juan Pérez - Desarrollador Front-End
+          {{ aboutData.author }}
         </p>
       </div>
     </div>
     <div class="border-t border-border-dark my-12" />
-    <about-job-list :job-list="joblist" />
+    <about-job-list :job-list="joblist" :title="aboutData.joblist_title" />
     <div class="border-t border-border-dark my-12" />
-    <about-skill-list :skillsections="skillsections" />
+    <about-skill-list :skillsections="skillsections" :title="aboutData.skilllist_title" />
     <div class="border-t border-border-dark my-12" />
     <div class="text-center pt-8">
       <button class="flex mx-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
-        <NuxtLink to="/contact">
-          Ponerse en Contacto
+        <NuxtLink :to="aboutData.button.link">
+          {{ aboutData.button.text }}
         </NuxtLink>
       </button>
     </div>

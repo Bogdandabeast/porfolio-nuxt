@@ -6,9 +6,7 @@ type Job = {
   end_date: number | string;
 };
 
-defineProps<{ jobList: Job[] }>();
-
-const title = 'Experiencia';
+defineProps<{ jobList: Job[]; title: string }>();
 </script>
 
 <template>

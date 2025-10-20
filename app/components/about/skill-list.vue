@@ -1,7 +1,5 @@
 <script setup lang="ts">
-defineProps<{ skillsections: SkillSection[] }>();
-
-const title = 'Habilidades';
+defineProps<{ skillsections: SkillSection[]; title: string }>();
 
 type SkillSection = {
   field: string;

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import projectCardData from '~/assets/data/components/project-card.json';
+
 type Card = {
   name: string;
   description: string;
@@ -19,8 +21,12 @@ defineProps<{ card: Card }>();
       >
       <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
         <div class="flex gap-4">
-          <a class="flex items-center gap-2 bg-white/90 text-gray-800 px-4 py-2 rounded-lg text-sm font-bold hover:bg-white transition-all transform hover:scale-105" href="#">Ver Proyecto</a>
-          <a class="flex items-center gap-2 bg-gray-800/90 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-900 transition-all transform hover:scale-105" href="#">Ver Código</a>
+          <NuxtLink class="flex items-center gap-2 bg-white/90 text-gray-800 px-4 py-2 rounded-lg text-sm font-bold hover:bg-white transition-all transform hover:scale-105" to="#">
+            {{ projectCardData.view_project_button }}
+          </NuxtLink>
+          <NuxtLink class="flex items-center gap-2 bg-gray-800/90 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-900 transition-all transform hover:scale-105" to="#">
+            {{ projectCardData.view_code_button }}
+          </NuxtLink>
         </div>
       </div>
     </div>
