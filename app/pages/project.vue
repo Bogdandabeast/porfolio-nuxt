@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import cards from '@/assets/data/pages/project-cards.json'
+import cards from '@/assets/data/pages/project-cards.json';
 </script>
 
 <template>
