@@ -17,5 +17,6 @@
       "name": "Contacto",
       "route": "/contact"
     }
-  ]
+  ],
+  "aria_label": "Open menu"
 }

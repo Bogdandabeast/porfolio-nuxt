@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
 export type Link = {
   name: string;
   route: string;
@@ -9,6 +7,7 @@ export type Link = {
 export type HeaderInfo = {
   name: string;
   links: Link[];
+  aria_label: string;
 };
 
 defineProps<{ headerInfo: HeaderInfo }>();
@@ -42,7 +41,7 @@ function toggleMenu() {
     <div class="md:hidden">
       <button
         class="text-text-dark"
-        aria-label="Open menu"
+        :aria-label="headerInfo.aria_label"
         :aria-expanded="isMenuOpen.toString()"
         @click="toggleMenu"
       >

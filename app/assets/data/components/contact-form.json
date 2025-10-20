@@ -1,0 +1,9 @@
+{
+  "name": "Nombre",
+  "name_placeholder": "Tu nombre",
+  "email": "Email",
+  "email_placeholder": "Tu correo electrónico",
+  "message": "Mensaje",
+  "message_placeholder": "Escribe tu mensaje aquí...",
+  "submit_button": "Enviar Mensaje"
+}
