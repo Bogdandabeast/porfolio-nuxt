@@ -12,7 +12,29 @@ const joblist = [
     start_date: 2025,
     end_date: 'la fecha',
   },
+];
 
+const skillsections = [
+  {
+
+    field: 'Lenguajes',
+    skills: [
+      'HTML',
+      'CSS',
+      'JAVASCRIPT',
+      'TYPESCRIPT',
+    ],
+  },
+  {
+
+    field: 'Pajas',
+    skills: [
+      'HTML',
+      'CSS',
+      'JAVASCRIPT',
+      'TYPESCRIPT',
+    ],
+  },
 ];
 </script>
 
@@ -39,48 +61,13 @@ const joblist = [
     <div class="border-t border-border-dark my-12" />
     <about-job-list :job-list="joblist" />
     <div class="border-t border-border-dark my-12" />
-    <h2 class="text-text-dark text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-8 pt-5 font-heading">
-      Habilidades
-    </h2>
-    <div class="px-4">
-      <div class="mb-6">
-        <h3 class="text-text-dark text-xl font-semibold mb-4 font-heading">
-          Lenguajes
-        </h3>
-        <div class="flex flex-wrap gap-3">
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">HTML</span>
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">CSS</span>
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">JavaScript</span>
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">TypeScript</span>
-        </div>
-      </div>
-      <div class="mb-6">
-        <h3 class="text-text-dark text-xl font-semibold mb-4 font-heading">
-          Frameworks
-        </h3>
-        <div class="flex flex-wrap gap-3">
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">React</span>
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">Vue.js</span>
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">Angular</span>
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">Next.js</span>
-        </div>
-      </div>
-      <div>
-        <h3 class="text-text-dark text-xl font-semibold mb-4 font-heading">
-          Herramientas
-        </h3>
-        <div class="flex flex-wrap gap-3">
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">Git</span>
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">Webpack</span>
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">Figma</span>
-          <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1.5 rounded-full">Jira</span>
-        </div>
-      </div>
-    </div>
+    <about-skill-list :skillsections="skillsections" />
     <div class="border-t border-border-dark my-12" />
     <div class="text-center pt-8">
       <button class="flex mx-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
-        <span class="truncate">Ponerse en Contacto</span>
+        <NuxtLink to="/contact">
+          Ponerse en Contacto
+        </NuxtLink>
       </button>
     </div>
   </div>
