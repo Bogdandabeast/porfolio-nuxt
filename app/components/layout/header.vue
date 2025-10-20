@@ -16,9 +16,9 @@ defineProps<{ headerInfo: HeaderInfo }>();
 <template>
   <header class="flex items-center justify-between px-6 py-4 whitespace-nowrap">
     <div class="flex items-center gap-4 text-text-dark">
-      <span class="font-display text-xl leading-tight font-bold tracking-tight">
+      <NuxtLink to="/" class="font-display text-xl leading-tight font-bold tracking-tight">
         {{ headerInfo.name }}
-      </span>
+      </NuxtLink>
     </div>
     <nav class="hidden items-center gap-9 md:flex">
       <NuxtLink
