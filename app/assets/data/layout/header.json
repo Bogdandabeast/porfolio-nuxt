@@ -2,32 +2,20 @@
   "name": "Bogdan",
   "links": [
     {
-      "name": "About",
-      "route": "/about"
-    },
-    {
-      "name": "Home",
+      "name": "Inicio",
       "route": "/"
     },
     {
-      "name": "Services",
-      "route": "/services"
+      "name": "Sobre mí",
+      "route": "/about"
     },
     {
-      "name": "Portfolio",
-      "route": "/portfolio"
+      "name": "Proyectos",
+      "route": "/project"
     },
     {
-      "name": "Blog",
-      "route": "/blog"
-    },
-    {
-      "name": "Contact",
-      "route": "/contact"
-    },
-    {
-      "name": "FAQ",
-      "route": "/faq"
+      "name" : "Contacto",
+      "route" : "/contact"
     }
   ]
 }

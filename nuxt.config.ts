@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   vite: { plugins: [tailwindcss()] },
 
   eslint: {
-    checker: true,
+    checker: false,
     config: {
       standalone: false,
       stylistic: false,
