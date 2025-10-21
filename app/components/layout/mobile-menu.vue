@@ -37,12 +37,13 @@ watch(() => route.fullPath, () => {
 <template>
   <div
     v-auto-animate="{ easing: 'linear' }"
-    class="flex gap-2 fixed z-10 left-5 bottom-0 my-10 ml-2 w-full shadow-md md:hidden"
+    class="flex gap-2 fixed z-10 right-5 bottom-0 my-10 shadow-md md:hidden"
+    :class="{ 'bg-background-dark/90 border rounded-2xl p-2': toggle, 'opacity-100': !toggle }"
   >
     <Icon
       v-if="toggle"
-      name="streamline:interface-setting-menu-2-button-parallel-horizontal-lines-menu-navigation-staggered-three-hamburger"
-      size="30"
+      name="material-symbols:cancel-rounded"
+      size="28"
       @click.stop="toggleMenu"
     />
     <Icon
@@ -51,12 +52,12 @@ watch(() => route.fullPath, () => {
       size="30"
       @click.stop="toggleMenu"
     />
-    <nav v-if="toggle" class="flex items-center px-4 gap-5">
+    <nav v-if="toggle" class="flex flex-col items-start px-4 gap-5 my-2">
       <NuxtLink
         v-for="(link, index) in links"
         :key="link.name + link.route + index"
         :to="link.route"
-        class="font-lato text-sm leading-normal rounded-lg bg-primary font-medium text-text-dark px-3 py-1"
+        class="font-lato text-sm leading-normal font-medium text-text-dark px-3 py-1"
       >
         {{ link.name }}
       </NuxtLink>
