@@ -24,13 +24,13 @@ const validFormFieldSchema = {
   message: z
     .string()
     .min(10)
-    .max(1000)
+    .max(255)
     .trim(),
 };
 const userFormConstraintMessages = {
   name: 'El nombre debe tener entre 2 y 50 caracteres',
   email: 'Debes introducir un correo electrónico válido',
-  message: 'El mensaje debe tener entre 10 y 1000 caracteres',
+  message: 'El mensaje debe tener entre 10 y 255 caracteres',
 };
 
 const hasError = reactive({
