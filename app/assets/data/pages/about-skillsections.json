@@ -4,17 +4,35 @@
     "skills": [
       "HTML",
       "CSS",
-      "JAVASCRIPT",
-      "TYPESCRIPT"
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "Java",
+      "Bash"
     ]
   },
   {
-    "field": "Pajas",
+    "field": "Frameworks y Librerías",
     "skills": [
-      "HTML",
-      "CSS",
-      "JAVASCRIPT",
-      "TYPESCRIPT"
+      "Vue",
+      "React",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "field": "Backend y Servidores",
+    "skills": [
+      "Node.js",
+      "Docker",
+      "Podman",
+      "Linux"
+    ]
+  },
+  {
+    "field": "Cloud e Infraestructura",
+    "skills": [
+      "AWS",
+      "Ansible"
     ]
   }
 ]
