@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { contactFormSchema } from '#shared/utils/contact';
+import { contactFormSchema } from '~~/shared/utils/zod/contact';
 
 import form from '~/assets/data/components/contact-form.json';
 

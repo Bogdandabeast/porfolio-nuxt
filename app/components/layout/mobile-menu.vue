@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { linkSchema } from '#shared/utils/layout';
+import { linkSchema } from '~~/shared/utils/zod/layout';
 import { onMounted, onUnmounted, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { z } from 'zod';

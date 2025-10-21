@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import contact from '~/assets/data/pages/contact.json';
+import { contactSchema } from '~~/shared/utils/zod/contact';
+
+import contactJson from '~/assets/data/pages/contact.json';
+
+const contact = contactSchema.parse(contactJson);
 </script>
 
 <template>

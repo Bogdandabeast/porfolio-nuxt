@@ -1,5 +1,9 @@
 import { z } from 'zod';
 
+import config from './zod.config';
+
+config();
+
 export const iconSchema = z.object({
   name: z.string(),
   size: z.string(),

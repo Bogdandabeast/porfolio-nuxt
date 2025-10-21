@@ -14,4 +14,16 @@ export const skillSectionSchema = z.object({
   skills: z.array(z.string()),
 });
 
+export const aboutDataSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  author: z.string(),
+  joblist_title: z.string(),
+  skilllist_title: z.string(),
+  button: z.object({
+    text: z.string(),
+    link: z.string(),
+  }),
+});
+
 export const skillSectionsSchema = z.array(skillSectionSchema);

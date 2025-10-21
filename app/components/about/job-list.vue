@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { jobListSchema } from '#shared/utils/about';
+import type { jobListSchema } from '~~/shared/utils/zod/about';
 import type { z } from 'zod';
 
 type JobList = z.infer<typeof jobListSchema>;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { headerSchema } from '#shared/utils/layout';
+import type { headerSchema } from '~~/shared/utils/zod/layout';
 import type { z } from 'zod';
 
 type HeaderInfo = z.infer<typeof headerSchema>;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { projectCardsSchema } from '#shared/utils/project';
+import type { projectCardsSchema } from '~~/shared/utils/zod/project';
 import type { z } from 'zod';
 
 type TabCards = z.infer<typeof projectCardsSchema>;
@@ -50,6 +50,3 @@ function selectCategory(category: string) {
     />
   </div>
 </template>
-
-<style scoped>
-</style>

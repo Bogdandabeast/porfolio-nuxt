@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { skillSectionSchema } from '#shared/utils/about';
+import type { skillSectionSchema } from '~~/shared/utils/zod/about';
 import type { z } from 'zod';
 
 type SkillSection = z.infer<typeof skillSectionSchema>;

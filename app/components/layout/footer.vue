@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { footerSchema } from '#shared/utils/layout';
+import type { footerSchema } from '~~/shared/utils/zod/layout';
 import type { z } from 'zod';
 
 type FooterContent = z.infer<typeof footerSchema>;

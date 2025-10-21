@@ -9,3 +9,11 @@ export const contactFormSchema = z.object({
   message_placeholder: z.string(),
   submit_button: z.string(),
 });
+
+export const contactSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  find_me: z.string(),
+  email_title: z.string(),
+  email: z.string(),
+});

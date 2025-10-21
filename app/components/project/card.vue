@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { projectCardSchema } from '#shared/utils/project';
+import type { projectCardSchema } from '~~/shared/utils/zod/project';
 import type { z } from 'zod';
 
 import projectCardData from '~/assets/data/components/project-card.json';
