@@ -1,16 +1,8 @@
 <script setup lang="ts">
-export type Icon = {
-  name: string;
-  size: string;
-  url: string;
-  label: string;
-};
+import type { footerSchema } from '~~/shared/utils/zod/layout';
+import type { z } from 'zod';
 
-export type FooterContent = {
-  icons: Icon[];
-  text: string;
-
-};
+type FooterContent = z.infer<typeof footerSchema>;
 
 defineProps<{
   footerInfo: FooterContent;

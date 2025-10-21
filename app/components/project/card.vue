@@ -1,12 +1,10 @@
 <script lang="ts" setup>
+import type { projectCardSchema } from '~~/shared/utils/zod/project';
+import type { z } from 'zod';
+
 import projectCardData from '~/assets/data/components/project-card.json';
 
-type Card = {
-  name: string;
-  description: string;
-  img: string;
-  tags: string[];
-};
+type Card = z.infer<typeof projectCardSchema>;
 
 defineProps<{ card: Card }>();
 </script>

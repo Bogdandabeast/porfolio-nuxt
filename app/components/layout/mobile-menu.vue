@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import { linkSchema } from '~~/shared/utils/zod/layout';
 import { onMounted, onUnmounted, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
+import { z } from 'zod';
 
-import { links } from '~/assets/data/layout/header.json';
+import { links as rawLinks } from '~/assets/data/layout/header.json';
+
+const links = z.array(linkSchema).parse(rawLinks);
 
 const toggle = ref(false);
 const route = useRoute();

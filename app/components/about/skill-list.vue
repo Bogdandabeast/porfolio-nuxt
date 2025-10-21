@@ -1,10 +1,13 @@
 <script setup lang="ts">
-defineProps<{ skillsections: SkillSection[]; title: string }>();
+import type { skillSectionsSchema } from '~~/shared/utils/zod/about';
+import type { z } from 'zod';
 
-type SkillSection = {
-  field: string;
-  skills: string[];
-};
+type SkillSections = z.infer<typeof skillSectionsSchema>;
+
+defineProps<{
+  skillsections: SkillSections;
+  title: string;
+}>();
 </script>
 
 <template>

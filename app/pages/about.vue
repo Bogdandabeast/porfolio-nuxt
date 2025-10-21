@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import joblist from '~/assets/data/pages/about-joblist.json';
-import skillsections from '~/assets/data/pages/about-skillsections.json';
-import aboutData from '~/assets/data/pages/about.json';
+import { aboutDataSchema, jobListSchema, skillSectionsSchema } from '~~/shared/utils/zod/about';
+
+import joblistJson from '~/assets/data/pages/about-joblist.json';
+import skillsectionsJson from '~/assets/data/pages/about-skillsections.json';
+import aboutDataJson from '~/assets/data/pages/about.json';
+
+const aboutData = aboutDataSchema.parse(aboutDataJson);
+const joblist = jobListSchema.parse(joblistJson);
+const skillsections = skillSectionsSchema.parse(skillsectionsJson);
 </script>
 
 <template>
