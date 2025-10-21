@@ -1,12 +1,10 @@
 <script setup lang="ts">
-type Card = {
-  name: string;
-  description: string;
-  img: string;
-  tags: string[];
-};
+import type { projectCardsSchema } from '#shared/utils/project';
+import type { z } from 'zod';
 
-const props = defineProps<{ tabCards: Card[] }>();
+type TabCards = z.infer<typeof projectCardsSchema>;
+
+const props = defineProps<{ tabCards: TabCards }>();
 
 const selectedCategory = ref('All');
 

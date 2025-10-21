@@ -1,41 +1,45 @@
 <script setup lang="ts">
+import { contactFormSchema } from '#shared/utils/contact';
+
 import form from '~/assets/data/components/contact-form.json';
+
+const formData = contactFormSchema.parse(form);
 </script>
 
 <template>
   <form class="flex flex-col gap-6 border p-10">
     <div class="flex flex-col sm:flex-row gap-6">
       <label class="flex flex-col flex-1">
-        <p class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ form.name }}</p>
+        <p class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ formData.name }}</p>
         <input
           class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg h-12 placeholder:text-[var(--text-secondary-dark)] p-4 text-base font-normal leading-normal bg-zinc-800"
-          :placeholder="form.name_placeholder"
+          :placeholder="formData.name_placeholder"
           required=""
           value=""
         >
       </label>
     </div>
     <label class="flex flex-col flex-1">
-      <p class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ form.email }}</p>
+      <p class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ formData.email }}</p>
       <input
         class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg h-12 placeholder:text-[var(--text-secondary-dark)] p-4 text-base font-normal leading-normal bg-zinc-800"
-        :placeholder="form.email_placeholder"
+        :placeholder="formData.email_placeholder"
         required=""
         type="email"
         value=""
       >
     </label>
     <label class="flex flex-col flex-1">
-      <p class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ form.message }}</p>
+      <p class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ formData.message }}</p>
       <textarea
         class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg p-4 text-base font-normal leading-normal bg-zinc-800"
-        :placeholder="form.message_placeholder"
+        :placeholder="formData.message_placeholder"
         required=""
       />
     </label>
     <div>
       <button class="h-12 transform cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-6 text-base leading-normal font-bold tracking-normal text-white transition-colors hover:scale-105 hover:bg-primary/90">
-        <span class="truncate">{{ form.submit_button }}</span>
+        <span class="truncate">{{ formData.submit_button }}</span>
       </button>
     </div>
   </form>

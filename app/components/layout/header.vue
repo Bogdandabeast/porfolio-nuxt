@@ -1,14 +1,8 @@
 <script setup lang="ts">
-export type Link = {
-  name: string;
-  route: string;
-};
+import type { headerSchema } from '#shared/utils/layout';
+import type { z } from 'zod';
 
-export type HeaderInfo = {
-  name: string;
-  links: Link[];
-  aria_label: string;
-};
+type HeaderInfo = z.infer<typeof headerSchema>;
 
 defineProps<{ headerInfo: HeaderInfo }>();
 </script>

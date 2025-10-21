@@ -1,8 +1,8 @@
 <script setup lang="ts">
-type SkillSection = {
-  field: string;
-  skills: string[];
-};
+import type { skillSectionSchema } from '#shared/utils/about';
+import type { z } from 'zod';
+
+type SkillSection = z.infer<typeof skillSectionSchema>;
 
 defineProps<{ skillsection: SkillSection }>();
 </script>

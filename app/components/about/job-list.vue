@@ -1,12 +1,13 @@
 <script setup lang="ts">
-type Job = {
-  title: string;
-  company_name: string;
-  start_date: number;
-  end_date: number | string;
-};
+import type { jobListSchema } from '#shared/utils/about';
+import type { z } from 'zod';
 
-defineProps<{ jobList: Job[]; title: string }>();
+type JobList = z.infer<typeof jobListSchema>;
+
+defineProps<{
+  jobList: JobList;
+  title: string;
+}>();
 </script>
 
 <template>
