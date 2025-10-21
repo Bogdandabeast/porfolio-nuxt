@@ -6,7 +6,7 @@ import contact from '~/assets/data/pages/contact.json';
   <div class="flex flex-col md:flex-row gap-12 my-10">
     <div class="w-full md:w-1/2">
       <div class="flex flex-col gap-4 mb-8">
-        <p class="text-4xl font-black leading-tight tracking-[-0.033em] text-[var(--text-primary-dark)]">
+        <p class="text-4xl font-black leading-tight tracking-tight text-[var(--text-primary-dark)]">
           {{ contact.title }}
         </p>
         <p class="text-base font-normal leading-normal text-[var(--text-secondary-dark)]">

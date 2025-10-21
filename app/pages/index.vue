@@ -24,7 +24,7 @@ useHead({
         {{ page.description }}
       </p>
       <button
-        class="h-12 transform cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-6 text-base leading-normal font-bold tracking-[0.015em] text-white transition-colors hover:scale-105 hover:bg-primary/90"
+        class="h-12 transform cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-6 text-base leading-normal font-bold tracking-normal text-white transition-colors hover:scale-105 hover:bg-primary/90"
         :aria-label="page.button.text"
       >
         <NuxtLink to="/project">

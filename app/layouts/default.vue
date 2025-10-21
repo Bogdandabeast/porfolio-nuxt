@@ -6,7 +6,8 @@ import headerContent from '~/assets/data/layout/header.json';
 <template>
   <div class="flex flex-col min-h-screen">
     <layout-header :header-info="headerContent" />
-    <main v-auto-animate class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <layout-mobile-menu />
+    <main v-auto-animate class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <slot />
     </main>
     <layout-footer :footer-info="footerContent" />
