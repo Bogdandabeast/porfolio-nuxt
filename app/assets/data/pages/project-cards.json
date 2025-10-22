@@ -1,26 +1,36 @@
 [
   {
-    "name": "FitWear Shop",
-    "description": "E-commerce especializado en ropa deportiva con carrito de compras y pasarela de pago integrada.",
-    "img": "https://owiusmadrid.com/wp-content/uploads/2019/10/Desarrollo-Web.png",
-    "tags": ["Vue", "Nuxt"]
+    "name": "RiotVR",
+    "description": "Startup innovadora de realidad virtual enfocada en crear experiencias inmersivas en VRChat.",
+    "img": "/img/projects/riotvr.jpeg",
+    "tags": [
+      "VR",
+      "JavaScript"
+    ]
   },
   {
-    "name": "EduStream",
-    "description": "Plataforma de streaming educativo con cursos en video, sistema de suscripción y control de progreso.",
-    "img": "https://owiusmadrid.com/wp-content/uploads/2019/10/Desarrollo-Web.png",
-    "tags": ["PHP", "Java"]
+    "name": "Linux distro usando Fedora Atomic y CI/CD pipeline",
+    "description": "Adaptación personalizada de Fedora Atomic con alto rendimiento, herramientas de desarrollo avanzadas y configuración automatizada y resiliente.",
+    "img": "/img/projects/dev-setup.jpeg",
+    "tags": [
+      "Linux",
+      "CI/CD"
+    ]
   },
   {
-    "name": "PhotoConnect",
-    "description": "Red social para fotógrafos donde los usuarios pueden compartir, comentar y valorar imágenes.",
-    "img": "https://owiusmadrid.com/wp-content/uploads/2019/10/Desarrollo-Web.png",
-    "tags": ["Vue", "PHP"]
+    "name": "Plataforma de Aprendizaje JavaScript",
+    "description": "Sitio web educativo para recopilar y compartir apuntes de programación en JavaScript, facilitando el estudio colaborativo.",
+    "img": "/img/projects/javascriptdocs.jpeg",
+    "tags": [
+      "JavaScript"
+    ]
   },
   {
-    "name": "TaskFlow",
-    "description": "Aplicación de gestión de tareas con notificaciones push y sincronización en la nube.",
-    "img": "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
-    "tags": ["React Native", "Expo", "Firebase"]
+    "name": "Terminal Portfolio CLI en Web",
+    "description": "Emulador de terminal en el navegador que permite ejecutar comandos básicos con soporte para temas personalizables.",
+    "img": "/img/projects/cli.jpeg",
+    "tags": [
+      "JavaScript"
+    ]
   }
 ]

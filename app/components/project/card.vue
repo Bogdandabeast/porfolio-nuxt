@@ -15,7 +15,7 @@ defineProps<{ card: Card }>();
       <img
         class="w-full bg-center bg-no-repeat aspect-video bg-cover"
         data-alt="Screenshot of an e-commerce website for sports clothing"
-        src="https://owiusmadrid.com/wp-content/uploads/2019/10/Desarrollo-Web.png"
+        :src="card.img"
       >
       <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
         <div class="flex gap-4">
