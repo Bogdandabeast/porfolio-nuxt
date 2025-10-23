@@ -1,5 +1,18 @@
 [
   {
+    "field": "Soft Skills",
+    "skills": [
+      "Comunicación efectiva",
+      "Trabajo en equipo",
+      "Resolución de problemas",
+      "Adaptabilidad",
+      "Pensamiento crítico",
+      "Gestión del tiempo",
+      "Aprendizaje continuo",
+      "Creatividad"
+    ]
+  },
+  {
     "field": "Lenguajes",
     "skills": [
       "HTML",
@@ -15,7 +28,7 @@
     "field": "Frameworks y Librerías",
     "skills": [
       "Vue",
-      "React",
+      "Nuxt",
       "Tailwind CSS"
     ]
   },
@@ -23,6 +36,9 @@
     "field": "Backend y Servidores",
     "skills": [
       "Node.js",
+      "Bases de Datos",
+      "SQl",
+      "NoSQL",
       "Docker",
       "Podman",
       "Linux"
@@ -32,7 +48,8 @@
     "field": "Cloud e Infraestructura",
     "skills": [
       "AWS",
-      "Ansible"
+      "Ansible",
+      "Cloudflare"
     ]
   }
 ]

@@ -22,7 +22,8 @@
     "description": "Sitio web educativo para recopilar y compartir apuntes de programación en JavaScript, facilitando el estudio colaborativo.",
     "img": "/img/projects/javascriptdocs.jpeg",
     "tags": [
-      "JavaScript"
+      "JavaScript",
+      "Web"
     ]
   },
   {
@@ -30,7 +31,26 @@
     "description": "Emulador de terminal en el navegador que permite ejecutar comandos básicos con soporte para temas personalizables.",
     "img": "/img/projects/cli.jpeg",
     "tags": [
-      "JavaScript"
+      "JavaScript",
+      "CLI"
+    ]
+  },
+  {
+    "name": "Reloj Casio JS",
+    "description": "Ejercicio de clase en el cual he tenido que dotar de funcionar un reloj Casio a traves de JS",
+    "img": "/img/projects/dev-setup.jpeg",
+    "tags": [
+      "Academic",
+      "Frontend"
+    ]
+  },
+  {
+    "name": "proyecto-carrito-php-ajax",
+    "description": "Un trabajo grupal en el cual hemos hecho una tienda online de venta de zapatillas usando Javascript, Ajax, con PHP y Mysql. Con validación de formularios, diseño responsive, carga dinámica de productos y carrito con validación en el backend y persistencia de datos.",
+    "img": "/img/projects/dev-setup.jpeg",
+    "tags": [
+      "Academic",
+      "Backend"
     ]
   }
 ]

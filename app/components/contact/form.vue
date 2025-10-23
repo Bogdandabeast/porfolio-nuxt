@@ -23,51 +23,75 @@ const showMessageError = computed(() => hasError.message && messageField.value.l
 <template>
   <form class="flex flex-col gap-6 border p-10">
     <div class="flex flex-col sm:flex-row gap-6">
-      <label v-auto-animate class="flex flex-col flex-1">
-        <p class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ formData.name }}</p>
+      <label
+        v-auto-animate
+        for="name"
+        class="flex flex-col flex-1"
+      >
+        <span class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ formData.name }}</span>
         <input
+          id="name"
           v-model="nameField"
           class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg h-12 placeholder:text-[var(--text-secondary-dark)] p-4 text-base font-normal leading-normal bg-zinc-800 focus:outline-none focus:ring-0"
           :class="{ 'border border-green-300': !hasError.name }"
           :placeholder="formData.name_placeholder"
           required
+          :aria-invalid="showNameError"
+          aria-describedby="name-error"
         >
         <p
           v-if="showNameError"
+          id="name-error"
           class="p-2 bg-zinc-500 border rounded my-1"
         >
           {{ userFormConstraintMessages.name }}
         </p>
       </label>
     </div>
-    <label v-auto-animate class="flex flex-col flex-1">
-      <p class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ formData.email }}</p>
+    <label
+      v-auto-animate
+      for="email"
+      class="flex flex-col flex-1"
+    >
+      <span class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ formData.email }}</span>
       <input
+        id="email"
         v-model="emailField"
         class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg h-12 placeholder:text-[var(--text-secondary-dark)] p-4 text-base font-normal leading-normal bg-zinc-800 focus:outline-none focus:ring-0"
         :class="{ 'border border-green-300': !hasError.email, 'border border-red-300': showEmailError }"
         :placeholder="formData.email_placeholder"
         required
         type="email"
+        :aria-invalid="showEmailError"
+        aria-describedby="email-error"
       >
       <p
         v-if="showEmailError"
+        id="email-error"
         class="p-2 bg-zinc-500 border rounded my-1"
       >
         {{ userFormConstraintMessages.email }}
       </p>
     </label>
-    <label v-auto-animate class="flex flex-col flex-1">
-      <p class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ formData.message }}</p>
+    <label
+      v-auto-animate
+      for="message"
+      class="flex flex-col flex-1"
+    >
+      <span class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ formData.message }}</span>
       <textarea
+        id="message"
         v-model="messageField"
         class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg p-4 text-base font-normal leading-normal bg-.zinc-800 focus:outline-none focus:ring-0"
         :class="{ 'border border-green-300': !hasError.message }"
         :placeholder="formData.message_placeholder"
         required
+        :aria-invalid="showMessageError"
+        aria-describedby="message-error"
       />
       <p
         v-if="showMessageError"
+        id="message-error"
         class="p-2 bg-zinc-500 border rounded my-1"
       >
         {{ userFormConstraintMessages.message }}
