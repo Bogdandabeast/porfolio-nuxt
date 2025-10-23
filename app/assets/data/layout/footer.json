@@ -15,7 +15,7 @@
     {
       "name": "line-md:email",
       "size": "30",
-      "url": "bogdan.joboffers@gmail.com@email.com",
+      "url": "https://gmail.com",
       "label": "Email"
     },
     {
@@ -25,5 +25,5 @@
       "label": "Phone"
     }
   ],
-  "text": "Bogdanfolio Todos los derechos reservados."
+  "text": "Bogdan Sydorko - Todos los derechos reservados."
 }
