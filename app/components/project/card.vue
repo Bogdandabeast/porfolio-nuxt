@@ -19,10 +19,16 @@ defineProps<{ card: Card }>();
       >
       <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
         <div class="flex gap-4">
-          <NuxtLink class="flex items-center gap-2 bg-white/90 text-gray-800 px-6 py-3 md:px-4 md:py-2 rounded-lg text-base md:text-sm font-bold hover:bg-white transition-all transform hover:scale-105" to="#">
+          <NuxtLink
+            :to="card.url"
+            class="flex items-center gap-2 bg-white/90 text-gray-800 px-6 py-3 md:px-4 md:py-2 rounded-lg text-base md:text-sm font-bold hover:bg-white transition-all transform hover:scale-105"
+          >
             {{ projectCardData.view_project_button }}
           </NuxtLink>
-          <NuxtLink class="flex items-center gap-2 bg-gray-800/90 text-white px-6 py-3 md:px-4 md:py-2 rounded-lg text-base md:text-sm font-bold hover:bg-gray-900 transition-all transform hover:scale-105" to="#">
+          <NuxtLink
+            :to="card.url"
+            class="flex items-center gap-2 bg-gray-800/90 text-white px-6 py-3 md:px-4 md:py-2 rounded-lg text-base md:text-sm font-bold hover:bg-gray-900 transition-all transform hover:scale-105"
+          >
             {{ projectCardData.view_code_button }}
           </NuxtLink>
         </div>

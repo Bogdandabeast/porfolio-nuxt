@@ -6,7 +6,8 @@
     "tags": [
       "VR",
       "JavaScript"
-    ]
+    ],
+    "url": "https://riotvr.pages.dev/"
   },
   {
     "name": "Linux distro usando Fedora Atomic y CI/CD pipeline",
@@ -15,7 +16,8 @@
     "tags": [
       "Linux",
       "CI/CD"
-    ]
+    ],
+    "url": "https://github.com/Bogdandabeast/dev-setup"
   },
   {
     "name": "Plataforma de Aprendizaje JavaScript",
@@ -24,7 +26,8 @@
     "tags": [
       "JavaScript",
       "Web"
-    ]
+    ],
+    "url": "https://javascriptdocs.pages.dev/"
   },
   {
     "name": "Terminal Portfolio CLI en Web",
@@ -33,7 +36,8 @@
     "tags": [
       "JavaScript",
       "CLI"
-    ]
+    ],
+    "url": "https://bogdancli.pages.dev/"
   },
   {
     "name": "Reloj Casio JS",
@@ -42,15 +46,17 @@
     "tags": [
       "Academic",
       "Frontend"
-    ]
+    ],
+    "url": "/projects/reloj-casio"
   },
   {
-    "name": "proyecto-carrito-php-ajax",
+    "name": "Proyecto Carrito PHP-Ajax",
     "description": "Un trabajo grupal en el cual hemos hecho una tienda online de venta de zapatillas usando Javascript, Ajax, con PHP y Mysql. Con validación de formularios, diseño responsive, carga dinámica de productos y carrito con validación en el backend y persistencia de datos.",
     "img": "/img/projects/dev-setup.jpeg",
     "tags": [
       "Academic",
       "Backend"
-    ]
+    ],
+    "url": "https://github.com/Bogdandabeast/proyecto-carrito-php-ajax"
   }
 ]

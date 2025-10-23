@@ -5,6 +5,7 @@ export const projectCardSchema = z.object({
   description: z.string(),
   img: z.string(),
   tags: z.array(z.string()),
+  url: z.string(),
 });
 
 export const projectCardsSchema = z.array(projectCardSchema);
