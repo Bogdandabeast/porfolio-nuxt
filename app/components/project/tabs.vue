@@ -2,32 +2,13 @@
 import type { projectCardsSchema } from '~~/shared/utils/zod/project';
 import type { z } from 'zod';
 
+import { useProjectTabs } from '~/composables/use-project-tabs';
+
 type TabCards = z.infer<typeof projectCardsSchema>;
 
 const props = defineProps<{ tabCards: TabCards }>();
 
-const selectedCategory = ref('All');
-
-const categories = computed(() => {
-  const tags = new Set<string>();
-  props.tabCards.forEach((card) => {
-    card.tags.forEach((tag) => {
-      tags.add(tag);
-    });
-  });
-  return ['All', ...Array.from(tags)];
-});
-
-const filteredCards = computed(() => {
-  if (selectedCategory.value === 'All') {
-    return props.tabCards;
-  }
-  return props.tabCards.filter(card => card.tags.includes(selectedCategory.value));
-});
-
-function selectCategory(category: string) {
-  selectedCategory.value = category;
-}
+const { selectedCategory, categories, filteredCards, selectCategory } = useProjectTabs(props.tabCards);
 </script>
 
 <template>
