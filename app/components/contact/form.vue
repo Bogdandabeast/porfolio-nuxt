@@ -1,54 +1,23 @@
 <script setup lang="ts">
 import { contactFormSchema } from '~~/shared/utils/zod/contact';
-import { z } from 'zod';
 
 import form from '~/assets/data/components/contact-form.json';
+import { useContactForm } from '~/composables/use-contact-form';
 
 const formData = contactFormSchema.parse(form);
 
-const nameField = ref('');
-const emailField = ref('');
-const messageField = ref('');
+const {
+  nameField,
+  emailField,
+  messageField,
+  userFormConstraintMessages,
+  hasError,
+  CanSendForm,
+} = useContactForm();
 
-const validFormFieldSchema = {
-  name: z
-    .string()
-    .min(2)
-    .max(50),
-
-  email: z
-    .email()
-    .min(3)
-    .toLowerCase(),
-
-  message: z
-    .string()
-    .min(10)
-    .max(255)
-    .trim(),
-};
-const userFormConstraintMessages = {
-  name: 'El nombre debe tener entre 2 y 50 caracteres',
-  email: 'Debes introducir un correo electrónico válido',
-  message: 'El mensaje debe tener entre 10 y 255 caracteres',
-};
-
-const hasError = reactive({
-  name: computed(() => {
-    return !validFormFieldSchema.name.safeParse(nameField.value).success;
-  }),
-  email: computed(() => {
-    return !validFormFieldSchema.email.safeParse(emailField.value).success;
-  }),
-  message: computed(() => {
-    return !validFormFieldSchema.message.safeParse(messageField.value).success;
-  }),
-
-});
-
-const CanSendForm = computed(() => {
-  return !hasError.name && !hasError.email && !hasError.message;
-});
+const showNameError = computed(() => hasError.name && nameField.value.length > 0);
+const showEmailError = computed(() => hasError.email && emailField.value.length > 0);
+const showMessageError = computed(() => hasError.message && messageField.value.length > 0);
 </script>
 
 <template>
@@ -64,10 +33,11 @@ const CanSendForm = computed(() => {
           required
         >
         <p
-          v-if="hasError.name"
-
+          v-if="showNameError"
           class="p-2 bg-zinc-500 border rounded my-1"
-        > {{ userFormConstraintMessages.name }}</p>
+        >
+          {{ userFormConstraintMessages.name }}
+        </p>
       </label>
     </div>
     <label v-auto-animate class="flex flex-col flex-1">
@@ -75,31 +45,33 @@ const CanSendForm = computed(() => {
       <input
         v-model="emailField"
         class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg h-12 placeholder:text-[var(--text-secondary-dark)] p-4 text-base font-normal leading-normal bg-zinc-800 focus:outline-none focus:ring-0"
-        :class="{ 'border border-green-300': !hasError.email }"
+        :class="{ 'border border-green-300': !hasError.email, 'border border-red-300': showEmailError }"
         :placeholder="formData.email_placeholder"
         required
         type="email"
       >
       <p
-        v-if="hasError.email"
-
+        v-if="showEmailError"
         class="p-2 bg-zinc-500 border rounded my-1"
-      > {{ userFormConstraintMessages.email }}</p>
+      >
+        {{ userFormConstraintMessages.email }}
+      </p>
     </label>
     <label v-auto-animate class="flex flex-col flex-1">
       <p class="text-base font-medium leading-normal pb-2 text-[var(--text-primary-dark)]">{{ formData.message }}</p>
       <textarea
         v-model="messageField"
-        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg p-4 text-base font-normal leading-normal bg-zinc-800 focus:outline-none focus:ring-0"
+        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg p-4 text-base font-normal leading-normal bg-.zinc-800 focus:outline-none focus:ring-0"
         :class="{ 'border border-green-300': !hasError.message }"
         :placeholder="formData.message_placeholder"
         required
       />
       <p
-        v-if="hasError.message"
-
+        v-if="showMessageError"
         class="p-2 bg-zinc-500 border rounded my-1"
-      > {{ userFormConstraintMessages.message }}</p>
+      >
+        {{ userFormConstraintMessages.message }}
+      </p>
     </label>
     <div>
       <button

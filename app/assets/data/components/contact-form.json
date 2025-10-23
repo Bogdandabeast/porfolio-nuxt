@@ -1,9 +1,9 @@
 {
   "name": "Nombre",
-  "name_placeholder": "Tu nombre",
+  "name_placeholder": "Tu nombre (ej: John Doe)",
   "email": "Email",
-  "email_placeholder": "Tu correo electrónico",
+  "email_placeholder": "Tu correo electrónico (ej: john.doe@example.com)",
   "message": "Mensaje",
-  "message_placeholder": "Escribe tu mensaje aquí...",
+  "message_placeholder": "Escribe tu mensaje aquí... (ej: ¡Hola! Me gustaría saber más sobre tus proyectos.)",
   "submit_button": "Enviar Mensaje"
 }

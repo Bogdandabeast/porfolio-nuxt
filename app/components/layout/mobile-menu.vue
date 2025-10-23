@@ -1,37 +1,13 @@
 <script setup lang="ts">
 import { linkSchema } from '~~/shared/utils/zod/layout';
-import { onMounted, onUnmounted, ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
 import { z } from 'zod';
 
 import { links as rawLinks } from '~/assets/data/layout/header.json';
+import { useMobileMenu } from '~/composables/use-mobile-menu';
 
 const links = z.array(linkSchema).parse(rawLinks);
 
-const toggle = ref(false);
-const route = useRoute();
-
-function toggleMenu() {
-  toggle.value = !toggle.value;
-}
-
-function closeMenuIfOpened() {
-  if (toggle.value) {
-    toggle.value = false;
-  }
-}
-
-onMounted(() => {
-  document.addEventListener('click', closeMenuIfOpened);
-});
-
-onUnmounted(() => {
-  document.removeEventListener('click', closeMenuIfOpened);
-});
-
-watch(() => route.fullPath, () => {
-  toggle.value = false;
-});
+const { toggle, toggleMenu } = useMobileMenu();
 </script>
 
 <template>
